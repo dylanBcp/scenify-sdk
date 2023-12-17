@@ -36,8 +36,15 @@ fabric.Frame.fromObject = FrameObject.fromObject
 
 export interface FrameOptions extends fabric.IRectOptions {
   id: string
+  version: string,
+  objects: Object[],
   name: string
-  description?: string
+  description?: string,
+  width: number,
+  height: number,
+  fill: string,
+  hoverCursor: string,
+  absolutePositioned: boolean,
 }
 
 declare module 'fabric' {

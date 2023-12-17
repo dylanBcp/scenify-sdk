@@ -34,6 +34,7 @@ export const EditorContext = createContext<IEditorContext>({
   setContextMenuRequest: () => {}
 })
 
+// @ts-ignore
 export const EditorProvider: FC = ({ children }) => {
   const [canvas, setCanvas] = useState<fabric.Canvas | null>(null)
   const [activeObject, setActiveObject] = useState<fabric.Object | null>(null)

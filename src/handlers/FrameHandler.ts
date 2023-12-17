@@ -18,6 +18,8 @@ class FrameHandler extends BaseHandler {
     const frame = new fabric.Frame({
       width: 1280,
       height: 720,
+      version: '',
+      objects: [],
       id: 'frame',
       name: 'Initial Frame',
       fill: '#ffffff',
@@ -78,6 +80,7 @@ class FrameHandler extends BaseHandler {
 
   getOptions = (): FrameOptions => {
     const frame = this.getFrame()
+    // @ts-ignore
     return frame.toJSON(this.handlers.propertiesToInclude)
   }
 

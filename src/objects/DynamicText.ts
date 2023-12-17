@@ -1,5 +1,6 @@
 import { fabric } from 'fabric'
-import { groupBy, uniqueId, pick } from 'lodash'
+import {groupBy, uniqueId} from "lodash";
+import pick from "lodash/pick";
 const REGEX_VAR = new RegExp(/\{\{[a-zA-Z0-9-_]+?\}\}/g)
 
 export class DynamicTextObject extends fabric.Textbox {
